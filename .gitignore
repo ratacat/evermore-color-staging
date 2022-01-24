@@ -1,0 +1,15 @@
+# Mac
+.DS_Store
+.vscode
+
+# NPM/Yarn
+node_modules
+yarn-error.log
+package-lock.json
+
+# Security
+.env
+database.json
+
+# Tests
+coverage
