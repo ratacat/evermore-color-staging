@@ -1,0 +1,2 @@
+<c="lime">Beneath the Roots</c>
+<c="darkgray">You're in a room enclosed in pale stone, it feels smooth to the touch. The ceiling must be far above you, as the only thing you can see from above are massive gnarled roots snaking down along the walls. Fuzzy black hairs are densely located at the node junctions.</c>

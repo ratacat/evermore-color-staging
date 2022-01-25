@@ -1,16 +1,22 @@
 import colorNameToHex from "./colorNameToHex.js";
+import { Chalk } from "chalk";
+const chalk = new Chalk({ level: 3 });
 
 function convertToChalk(string) {
   const stringWithHex = convertToHex(string);
 
   const REGEX = /<(?:c|color)(?: value)?=['"](#[a-fA-F0-9]{6}|#[a-fA-F0-9]{3}|[aA-zZ]+?)['"]>(.+?)<\/(?:c|color)>/g;
-  return stringWithHex.replace(REGEX, (match, p1, p2, offset, simple) => {
+  let replaced = stringWithHex.replace(REGEX, (match, p1, p2, offset, simple) => {
     return `{${p1} ${p2}}`;
   });
+  if (stringWithHex === replaced) {
+    console.log(`${chalk.red("Formatting Error with this line --->")} ${string}`);
+  }
+  return replaced;
 }
 
 function buildNameRegex(colors) {
-  const regex = new RegExp("(" + colors.reduce((pv, cv, i, array) => pv + "|" + cv) + ")", "g");
+  const regex = new RegExp(`['"]` + "(" + colors.reduce((pv, cv, i, array) => pv + "|" + cv) + ")" + `['"]`, "g");
   return regex;
 }
 

@@ -1,0 +1,4 @@
+An <c="yellow">old</c> and <c="brown">tired</c> looking goblin
+<c="cornflowerblue">Jerrik</c> the Oldu Stah
+A well muscled goblin in <c="darkgray">brigandine</c> armor
+heyhu

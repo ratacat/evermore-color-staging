@@ -143,8 +143,8 @@ function colourNameToHex(colour) {
     yellowgreen: "#9acd32",
   };
 
-  if (typeof colours[colour.toLowerCase()] != "undefined") return colours[colour.toLowerCase()];
-  return colour;
+  if (typeof colours[colour.toLowerCase()] != "undefined") return `"${colours[colour.toLowerCase()]}"`;
+  return `"${colour}"`;
 }
 
 export default colourNameToHex;
