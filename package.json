@@ -7,15 +7,22 @@
   "license": "MIT",
   "type": "module",
   "dependencies": {
-    "chalk": "5.0.0",
-    "chalk-template": "^0.3.1",
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "chalk": "5.0.1",
     "chokidar": "^3.5.3",
     "jest": "^27.5.1",
-    "nodemon": "^2.0.15",
     "wrap-ansi": "^8.0.1"
   },
   "scripts": {
     "start": "node index.js",
     "test": "jest"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   }
 }
