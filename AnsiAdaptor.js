@@ -1,4 +1,5 @@
 import { Chalk } from "chalk";
+import gradient from 'gradient-string';
 
 const chalk = new Chalk({ level: 3 });
 
@@ -51,6 +52,22 @@ export class AnsiAdaptor {
           : string.slice(scanned, tagStart);
   
         // Save the parsed mod to be used when terminator is reached.
+        tags.push(mod);
+      }
+
+      // On gradient tag.
+      if (tag.slice(0,49) === '<span style="background:linear-gradient(to right,') {
+        // Build modificator.
+        const colors = tag.slice(49, tag.indexOf(")", 49)).split(',');
+        console.log({ colors, tag });
+        const mod = gradient(...colors);
+
+        // Append scanned text.
+        result += tags.length > 0 
+          ? tags[tags.length - 1](string.slice(scanned, tagStart))
+          : string.slice(scanned, tagStart);
+
+        // Save modificatior for later use.
         tags.push(mod);
       }
   
