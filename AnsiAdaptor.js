@@ -59,7 +59,6 @@ export class AnsiAdaptor {
       if (tag.slice(0,49) === '<span style="background:linear-gradient(to right,') {
         // Build modificator.
         const colors = tag.slice(49, tag.indexOf(")", 49)).split(',');
-        console.log({ colors, tag });
         const mod = gradient(...colors);
 
         // Append scanned text.
