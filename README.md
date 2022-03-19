@@ -1,5 +1,7 @@
 # evermore-color-staging
 
+![image](https://user-images.githubusercontent.com/62797411/159135162-beea079c-7deb-4db7-98b1-e93948eb6412.png)
+
 ## Usage
 
 > Requires [nodejs (npm)](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) and [yarn](https://yarnpkg.com/getting-started/install).
