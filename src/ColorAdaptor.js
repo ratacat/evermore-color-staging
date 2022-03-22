@@ -197,7 +197,7 @@ const processTags = (string, processTag) => {
   return result;
 };
 
-export class ColorAdaptor {
+class ColorAdaptor {
   constructor() {
     // This is a perfect place to specify options.
   };
@@ -243,3 +243,5 @@ export class ColorAdaptor {
     return string.length - this.stripTags(string).length;
   };
 };
+
+module.exports = ColorAdaptor

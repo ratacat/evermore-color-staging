@@ -1,10 +1,10 @@
-import { Chalk } from "chalk";
-import gradient from 'gradient-string';
+const gradient = require('gradient-string');
 
-const chalk = new Chalk({ level: 3 });
+class AnsiAdaptor {
+  async convert(string) {
+    const { Chalk } = await import("chalk");
+    const chalk = new Chalk({ level: 3 });
 
-export class AnsiAdaptor {
-  convert(string) {
     // Store converted text.
     let result = '';
   
@@ -77,3 +77,5 @@ export class AnsiAdaptor {
     return result;
   };
 };
+
+module.exports = AnsiAdaptor;
