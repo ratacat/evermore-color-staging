@@ -9,17 +9,17 @@
 //       ^^^^^^
 // SyntaxError: Cannot use import statement outside a module
 
-// import { AnsiAdaptor } from './AnsiAdaptor.js';
+// const AnsiAdaptor = require('./AnsiAdaptor.js');
 
 describe('AnsiAdaptor', () => {
   it.todo('enable test when bug is fixed');
 
-//   test('convert turns spans to ansi', () => {
-//     const adaptor = new AnsiAdaptor();
-//     const input   = `<span style="color:#ff0000">this is red</span>`;
-//     const output  = `\x1B[38;2;255;0;0mthis is red\x1B[39m`;
-//     expect(adaptor.convert(input)).toBe(output);
-//   });
+  // test('convert turns spans to ansi', () => {
+  //   const adaptor = new AnsiAdaptor();
+  //   const input   = `<span style="color:#ff0000">this is red</span>`;
+  //   const output  = `\x1B[38;2;255;0;0mthis is red\x1B[39m`;
+  //   expect(adaptor.convert(input)).toBe(output);
+  // });
 
 //   test('covert support nested tags', () => {
 //     const adaptor = new AnsiAdaptor();

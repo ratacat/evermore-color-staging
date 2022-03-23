@@ -1,4 +1,4 @@
-import { ColorAdaptor }  from "./ColorAdaptor.js";
+const ColorAdaptor = require("./ColorAdaptor.js");
 
 describe('ColorAdaptor', () => {
   test('stripTags', () => {

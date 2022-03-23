@@ -4,6 +4,8 @@ services:
   app:
     image: node:16-alpine
     working_dir: /app
+    ports:
+      - 80:8080
     volumes:
       - ./:/app
     command: ['yarn', 'start']

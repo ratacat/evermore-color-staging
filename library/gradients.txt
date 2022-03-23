@@ -1,3 +1,0 @@
-<g="red,green,lime">red, green and lime</g>
-<g="saddlebrown,royalblue,rosybrown">saddlebrown, royalblue and rosybrown</g>
-<gradient values="sandybrown,steelblue,whitesmoke">and this is a powerfull mix</g>
